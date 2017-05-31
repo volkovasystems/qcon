@@ -1,0 +1,31 @@
+{
+  "name": "qcon",
+  "version": "0.0.0",
+  "description": "Query constructor.",
+  "main": "qcon.deploy.js",
+  "support": "qcon.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "query",
+    "constructor",
+    "qcon"
+  ],
+  "homepage": "https://github.com/volkovasystems/qcon",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "falzy": "^0.19.0",
+    "fname": "^0.8.0",
+    "protype": "^0.21.0",
+    "pyp": "^0.0.0",
+    "wauker": "^0.14.0"
+  }
+}

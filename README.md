@@ -1,0 +1,2 @@
+# qcon
+Query constructor.

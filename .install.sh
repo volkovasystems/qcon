@@ -2,6 +2,7 @@ yarn add \
 babel-runtime \
 falzy \
 fname \
+fnamed \
 protype \
 pyp \
 wauker \
@@ -17,6 +18,7 @@ webpack \
 bower install \
 falzy \
 fname \
+fnamed \
 protype \
 pyp \
 wauker \

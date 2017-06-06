@@ -49,6 +49,7 @@
               		{
               			"falzy": "falzy",
               			"fname": "fname",
+              			"fnamed": "fnamed",
               			"protype": "protype",
               			"pyp": "pyp",
               			"wauker": "wauker"
@@ -58,6 +59,7 @@
 
 var falzy = require("falzy");
 var fname = require("fname");
+var fnamed = require("fnamed");
 var protype = require("protype");
 var pyp = require("pyp");
 var wauker = require("wauker");
@@ -88,7 +90,7 @@ var qcon = function qcon(entity, blueprint) {
 
 	blueprint = fname(blueprint);
 
-	return pyp(wauker(entity), function (constructor) {return fname(constructor) === blueprint;});
+	return pyp(wauker(entity), function (constructor) {return fnamed(constructor, blueprint);});
 };
 
 module.exports = qcon;

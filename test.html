@@ -1,8 +1,40 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./qcon.deploy.js">
-		</script>
+		<title>qcon unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./qcon.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "qcon unit test", function( assert ) {
+
+				assert.equal( qcon( new Date( ), "Date" ), Date, "should be equal" );
+
+				class A {
+					constructor( ){ };
+				}
+
+				class B extends A {
+					constructor( ){ super( ); }
+				}
+
+				class C extends B {
+					constructor( ){ super( ); }
+				}
+
+				assert.equal( qcon( new C( ), "B" ), B, "should be equal" );
+				
+			} );
+		</script>
+	</body>
 </html>

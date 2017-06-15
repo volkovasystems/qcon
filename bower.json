@@ -1,11 +1,13 @@
 {
   "name": "qcon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Query constructor.",
   "main": "qcon.deploy.js",
   "support": "qcon.support.js",
   "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -21,19 +23,12 @@
     "test",
     "tests"
   ],
-  "resolutions": {
-    "falzy": "^0.20.0",
-    "protype": "^0.22.0",
-    "cemento": "^0.16.0",
-    "harden": "^0.22.0",
-    "kount": "^0.11.0"
-  },
   "dependencies": {
     "falzy": "^0.20.0",
-    "fname": "^0.8.0",
-    "fnamed": "^0.8.0",
+    "fname": "^0.9.0",
+    "fnamed": "^0.9.0",
     "protype": "^0.22.0",
-    "pyp": "^0.0.0",
-    "wauker": "^0.14.0"
+    "pyp": "^0.1.0",
+    "wauker": "^0.16.0"
   }
 }

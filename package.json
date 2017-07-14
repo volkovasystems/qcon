@@ -1,6 +1,6 @@
 {
   "name": "qcon",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Query constructor.",
   "main": "qcon.js",
   "support": "qcon.support.js",
@@ -32,11 +32,11 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "falzy": "^0.20.0",
-    "fname": "^0.9.0",
-    "fnamed": "^0.9.0",
+    "fname": "^0.11.0",
+    "fnamed": "^0.11.0",
     "protype": "^0.22.0",
-    "pyp": "^0.2.0",
-    "wauker": "^0.16.0"
+    "pyp": "^0.3.0",
+    "wauker": "^0.18.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -44,6 +44,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
-    "webpack": "^2.6.1"
+    "webpack": "^3.2.0"
   }
 }

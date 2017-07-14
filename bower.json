@@ -1,6 +1,6 @@
 {
   "name": "qcon",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Query constructor.",
   "main": "qcon.deploy.js",
   "support": "qcon.support.js",
@@ -25,10 +25,10 @@
   ],
   "dependencies": {
     "falzy": "^0.20.0",
-    "fname": "^0.9.0",
-    "fnamed": "^0.9.0",
+    "fname": "^0.11.0",
+    "fnamed": "^0.11.0",
     "protype": "^0.22.0",
-    "pyp": "^0.2.0",
-    "wauker": "^0.16.0"
+    "pyp": "^0.3.0",
+    "wauker": "^0.18.0"
   }
 }

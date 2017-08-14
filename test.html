@@ -18,7 +18,7 @@
 		<script type="application/javascript">
 			QUnit.test( "qcon unit test", function( assert ) {
 
-				assert.equal( qcon( new Date( ), "Date" ), Date, "should be equal" );
+				assert.equal( qcon( new Date( ), "Date" ), Date, "should be equal to Date" );
 
 				class A {
 					constructor( ){ };
@@ -32,8 +32,8 @@
 					constructor( ){ super( ); }
 				}
 
-				assert.equal( qcon( new C( ), "B" ), B, "should be equal" );
-				
+				assert.equal( qcon( new C( ), "B" ), B, "should be equal to B" );
+
 			} );
 		</script>
 	</body>

@@ -1,49 +1,52 @@
 {
-  "name": "qcon",
-  "version": "0.4.0",
-  "description": "Query constructor.",
-  "main": "qcon.js",
-  "support": "qcon.support.js",
-  "deploy": "qcon.deploy.js",
-  "browser": "qcon.deploy.js",
-  "scripts": {
-    "build": "babel qcon.js --out-file qcon.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha qcon-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/qcon.git"
-  },
-  "keywords": [
-    "query",
-    "constructor",
-    "qcon"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/qcon/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/qcon#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "falzy": "^0.20.0",
-    "fname": "^0.11.0",
-    "fnamed": "^0.11.0",
-    "protype": "^0.22.0",
-    "pyp": "^0.3.0",
-    "wauker": "^0.18.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.2.0"
-  }
+	"name": "qcon",
+	"version": "0.5.0",
+	"description": "Query constructor.",
+	"main": "qcon.js",
+	"support": "qcon.support.js",
+	"deploy": "qcon.deploy.js",
+	"browser": "qcon.deploy.js",
+	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
+		"build": "babel qcon.js --out-file qcon.support.js --source-maps && webpack --progress --display-modules",
+		"pretest": "npm run clear && npm run build",
+		"test": "node qcon-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/qcon.git"
+	},
+	"keywords": [
+		"query",
+		"constructor",
+		"qcon"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/qcon/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/qcon#readme",
+	"dependencies": {
+		"babel-runtime": "^6.25.0",
+		"falzy": "^0.23.0",
+		"fname": "^0.13.0",
+		"fnamed": "^0.14.0",
+		"protype": "^0.24.0",
+		"pyp": "^0.5.0",
+		"wauker": "^0.21.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.5.4"
+	}
 }

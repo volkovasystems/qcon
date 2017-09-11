@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>qcon unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:qcon</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./qcon.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "qcon unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.equal( qcon( new Date( ), "Date" ), Date, "should be equal to Date" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				class A {
-					constructor( ){ };
-				}
-
-				class B extends A {
-					constructor( ){ super( ); }
-				}
-
-				class C extends B {
-					constructor( ){ super( ); }
-				}
-
-				assert.equal( qcon( new C( ), "B" ), B, "should be equal to B" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>

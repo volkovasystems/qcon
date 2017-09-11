@@ -1,34 +1,26 @@
 {
-  "name": "qcon",
-  "version": "0.5.0",
-  "description": "Query constructor.",
-  "main": "qcon.deploy.js",
-  "support": "qcon.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "query",
-    "constructor",
-    "qcon"
-  ],
-  "homepage": "https://github.com/volkovasystems/qcon",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.23.0",
-    "fname": "^0.13.0",
-    "fnamed": "^0.14.0",
-    "protype": "^0.24.0",
-    "pyp": "^0.5.0",
-    "wauker": "^0.21.0"
-  }
+	"name": "qcon",
+	"version": "0.5.0",
+	"description": "Query constructor.",
+	"main": "qcon.deploy.js",
+	"support": "qcon.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"query",
+		"constructor",
+		"qcon"
+	],
+	"homepage": "https://github.com/volkovasystems/qcon",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }

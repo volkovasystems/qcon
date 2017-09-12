@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-12T07:48:17.790Z",
+	"end": "2017-09-12T07:48:57.033Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "qcon",
+			"duration": 0,
+			"start": "2017-09-12T07:48:56.637Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "qcon",
+			"duration": 211,
+			"start": "2017-09-12T07:48:56.639Z",
+			"end": "2017-09-12T07:48:56.850Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-12T07:48:56.642Z",
+					"end": "2017-09-12T07:48:56.642Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "qcon",
+					"associatedTest": "should return constructor"
+				},
+				{
+					"start": "2017-09-12T07:48:56.784Z",
+					"end": "2017-09-12T07:48:56.784Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "qcon",
+					"associatedTest": "should return constructor"
+				},
+				{
+					"start": "2017-09-12T07:48:56.785Z",
+					"end": "2017-09-12T07:48:56.786Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "qcon",
+					"associatedTest": "should return constructor"
+				},
+				{
+					"start": "2017-09-12T07:48:56.850Z",
+					"end": "2017-09-12T07:48:56.850Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "qcon",
+					"associatedTest": "should return constructor"
+				},
+				{
+					"start": "2017-09-12T07:48:56.850Z",
+					"end": "2017-09-12T07:48:56.851Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "qcon"
+				}
+			]
+		},
+		{
+			"name": "`qcon( new Date( ), 'Date' )`",
+			"duration": 145,
+			"start": "2017-09-12T07:48:56.640Z",
+			"end": "2017-09-12T07:48:56.785Z",
+			"tests": [
+				{
+					"name": "should return constructor",
+					"start": "2017-09-12T07:48:56.641Z",
+					"end": "2017-09-12T07:48:56.784Z",
+					"duration": 143,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`qcon with instance of class C as entity and string 'B' as blueprint`",
+			"duration": 65,
+			"start": "2017-09-12T07:48:56.785Z",
+			"end": "2017-09-12T07:48:56.850Z",
+			"tests": [
+				{
+					"name": "should return constructor",
+					"start": "2017-09-12T07:48:56.785Z",
+					"end": "2017-09-12T07:48:56.850Z",
+					"duration": 65,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

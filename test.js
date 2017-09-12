@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const qcon = require( "./qcon.js" );
@@ -63,11 +63,33 @@ const qcon = require( "./qcon.js" );
 
 
 //: @server:
-
 describe( "qcon", ( ) => {
 
-} );
+	describe( "`qcon( new Date( ), 'Date' )`", ( ) => {
+		it( "should return constructor", ( ) => {
+			assert.equal( qcon( new Date( ), "Date" ), Date );
+		} );
+	} );
 
+	describe( "`qcon with instance of class C as entity and string 'B' as blueprint`", ( ) => {
+		it( "should return constructor", ( ) => {
+			class A {
+				constructor( ){ };
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			assert.deepEqual( qcon( new C( ), "B" ), B );
+		} );
+	} );
+
+} );
 //: @end-server
 
 

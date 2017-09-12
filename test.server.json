@@ -1,16 +1,46 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-11T18:24:34.390Z",
-    "end": "2017-09-11T18:24:34.390Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 3,
+		"tests": 2,
+		"passes": 2,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-12T07:48:16.523Z",
+		"end": "2017-09-12T07:48:16.533Z",
+		"duration": 10
+	},
+	"tests": [
+		{
+			"title": "should return constructor",
+			"fullTitle": "qcon `qcon( new Date( ), 'Date' )` should return constructor",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return constructor",
+			"fullTitle": "qcon `qcon with instance of class C as entity and string 'B' as blueprint` should return constructor",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should return constructor",
+			"fullTitle": "qcon `qcon( new Date( ), 'Date' )` should return constructor",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should return constructor",
+			"fullTitle": "qcon `qcon with instance of class C as entity and string 'B' as blueprint` should return constructor",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

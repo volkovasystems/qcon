@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const qcon = require( "./qcon.js" );
@@ -67,27 +67,115 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "qcon", ( ) => {
 
-} );
+	describe( "`qcon( new Date( ), 'Date' )`", ( ) => {
+		it( "should return constructor", ( ) => {
+			assert.equal( qcon( new Date( ), "Date" ), Date );
+		} );
+	} );
 
+	describe( "`qcon with instance of class C as entity and string 'B' as blueprint`", ( ) => {
+		it( "should return constructor", ( ) => {
+			class A {
+				constructor( ){ };
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			assert.deepEqual( qcon( new C( ), "B" ), B );
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "qcon", ( ) => {
 
-} );
+	describe( "`qcon( new Date( ), 'Date' )`", ( ) => {
+		it( "should return constructor", ( ) => {
+			assert.equal( qcon( new Date( ), "Date" ), Date );
+		} );
+	} );
 
+	describe( "`qcon with instance of class C as entity and string 'B' as blueprint`", ( ) => {
+		it( "should return constructor", ( ) => {
+			class A {
+				constructor( ){ };
+			}
+
+			class B extends A {
+				constructor( ){ super( ); }
+			}
+
+			class C extends B {
+				constructor( ){ super( ); }
+			}
+
+			assert.deepEqual( qcon( new C( ), "B" ), B );
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "qcon", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`qcon( new Date( ), 'Date' )`", ( ) => {
+		it( "should return constructor", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return qcon( new Date( ), "Date" ) === Date;
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+		} );
+	} );
+
+	describe( "`qcon with instance of class C as entity and string 'B' as blueprint`", ( ) => {
+		it( "should return constructor", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					class A {
+						constructor( ){ };
+					}
+
+					class B extends A {
+						constructor( ){ super( ); }
+					}
+
+					class C extends B {
+						constructor( ){ super( ); }
+					}
+
+					return qcon( new C( ), "B" ) === B
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+		} );
+	} );
+
+} );
 //: @end-bridge
